@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Components">
+      <UniqueIdentifier>{1324d8e3-ead9-4b3d-a4a4-9f37ba2c6300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Math">
+      <UniqueIdentifier>{802b5ace-a1d2-4cf3-b4b1-50b4defa96f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Primitive">
+      <UniqueIdentifier>{b390ccf0-693f-4680-9991-4c858d8cd810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Material">
+      <UniqueIdentifier>{199596ef-d735-409d-ac7a-cb093046bb60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\MultiThreading">
+      <UniqueIdentifier>{50b125eb-4c33-431c-95e0-e591418a7cf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\WorkerThread">
+      <UniqueIdentifier>{b56cf734-57ea-48c5-b138-fd39777ced3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{84b5d37c-d805-4e12-a9fd-b6b06289e61a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IETThread.cpp">
+      <Filter>Components\MultiThreading</Filter>
+    </ClCompile>
+    <ClCompile Include="PoolWorkerThread.cpp">
+      <Filter>Components\MultiThreading</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>Components\MultiThreading</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamRay.cpp">
+      <Filter>Components\WorkerThread</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseRaytracing.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vec3.h">
+      <Filter>Components\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ray.h">
+      <Filter>Components\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>Components\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="hitable.h">
+      <Filter>Components\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="hitable_list.h">
+      <Filter>Components\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="material.h">
+      <Filter>Components\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="lambertian.h">
+      <Filter>Components\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="metal.h">
+      <Filter>Components\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="dielectric.h">
+      <Filter>Components\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="IETThread.h">
+      <Filter>Components\MultiThreading</Filter>
+    </ClInclude>
+    <ClInclude Include="IExecutionEvent.h">
+      <Filter>Components\MultiThreading</Filter>
+    </ClInclude>
+    <ClInclude Include="IWorkerAction.h">
+      <Filter>Components\MultiThreading</Filter>
+    </ClInclude>
+    <ClInclude Include="PoolWorkerThread.h">
+      <Filter>Components\MultiThreading</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>Components\MultiThreading</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamRay.h">
+      <Filter>Components\WorkerThread</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseRaytracing.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
