@@ -23,7 +23,7 @@ public:
 
 	static int const LENGTH = 1600;
 	static int const WIDTH = 1080;
-	static int const RAYS = 50;
+	static int const RAYS = 300;
 
 
 	BaseRaytracing();

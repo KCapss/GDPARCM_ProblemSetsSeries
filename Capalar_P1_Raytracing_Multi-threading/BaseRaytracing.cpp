@@ -33,6 +33,7 @@ void BaseRaytracing::run()
 {
 	//Intitialize ThreadPool;
 	const auto processor_count = std::thread::hardware_concurrency();
+	std::cout << "Raytracing by Capalar, K.C" << std::endl;
 	std::cout << "Thread Count: " << processor_count << std::endl;
 	this->threadPool = new ThreadPool("Worker Pixel", processor_count); //Dependent on physical threads exist on the system
 	threadPool->startScheduler();
@@ -109,6 +110,8 @@ hitable* BaseRaytracing::generate_random_scenes()
 			}
 		}
 	}
+	//Test Case Requirment # 1 - 3 deafult big balls + 1 reflective ball. 
+
 
 	//Transparent Glass
 	list[i++] = new sphere(vec3(-2, 1, 0), 1.0, new dielectric(1.5));
@@ -118,9 +121,9 @@ hitable* BaseRaytracing::generate_random_scenes()
 	list[i++] = new sphere(vec3(-4, 1, 0), 1.0, new lambertian(vec3(0.1, 0.8, 0.2)));
 
 	//Metal Sphere - low gloss
-	list[i++] = new sphere(vec3(-0.5, 1, 1), 1.0, new metal(vec3(0.7, 0.6, 0.5), 0.6));
+	list[i++] = new sphere(vec3(-0.5, 1, 1), 1.0, new metal(vec3(0.7, 0.6, 0.5), 0.2));
 
-	//Mirror Metal
+	//Mirror Metal - Test case 1 ball
 	list[i++] = new sphere(vec3(-6, 1, -1), 1.0, new metal(vec3(1, 1, 1), 0.0));
 
 
