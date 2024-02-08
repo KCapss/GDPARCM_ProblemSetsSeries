@@ -69,7 +69,7 @@ void StreamRay::onStartTask()
 		int ig = int(255.99f * col[1]);
 		int ib = int(255.99f * col[2]);
 
-		//Resolving Inverted Png
+		//Critical Section: Writing the color of the pixel in the materal
 		guard.lock();
 		Vec4b& bgra = mat->at<Vec4b>(ny - currentRow - 1, nx - i - 1);
 		bgra[0] = saturate_cast<uchar>(ib); // Blue

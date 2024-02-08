@@ -21,9 +21,9 @@ class BaseRaytracing: public IExecutionEvent
 {
 public:
 
-	static int const LENGTH = 1080;
+	static int const LENGTH = 1600;
 	static int const WIDTH = 1080;
-	static int const RAYS = 400;
+	static int const RAYS = 50;
 
 
 	BaseRaytracing();

@@ -14,20 +14,16 @@ BaseRaytracing::BaseRaytracing()
 	ny = WIDTH;
 	ns = RAYS;
 	
-
-	//Camera Orientation
-	/*vec3 lookfrom(11, 3, -8);
-	vec3 lookat(-3, 1, 0);*/
-
-	vec3 lookfrom(18, 2.5, -12.5);
+	//Camera Parameters
+	vec3 lookfrom(18, 2, -12.5);
 	vec3 lookat(-3, 1, 0);
 
-	//Camera Parameters
 	float dist_to_focus = (lookfrom - lookat).length();
 	float aperture = 0.05f;
 
 	this->cam = new camera (lookfrom, lookat, vec3(0, 1, 0), 20.0f, float(nx) / float(ny), aperture, dist_to_focus);
 
+	//Constructing Png Format
 	mat = new Mat(ny, nx, CV_8UC4);
 	compression_params.push_back(IMWRITE_PNG_COMPRESSION);
 	compression_params.push_back(9);
@@ -42,8 +38,10 @@ void BaseRaytracing::run()
 	threadPool->startScheduler();
 	isRunning = true;
 
+	//World Geration
 	this->world = this->generate_random_scenes();
 
+	//Load Task
 	for (int j = ny - 1; j >= 0; j--) {
 		StreamRay* sampleRay = new StreamRay(nx, ny, j, ns, mat, cam, world, this);
 		this->threadPool->scheduleTask(sampleRay);
@@ -51,6 +49,8 @@ void BaseRaytracing::run()
 
 
 	while (isRunning) {
+
+		//Track until all task are done
 		if (count == ny) {
 			isRunning = false;
 			std::cout << "Pended work done" << std::endl;
@@ -61,15 +61,16 @@ void BaseRaytracing::run()
 	this->PrintOutput();
 }
 
+//IExecutionEvent attached
 void BaseRaytracing::onFinishedExecution()
 {
 	count++;
-	if (count == ny - 1) {
+	if (count == ny) {
 		FinishedRayTracing();
 	}
 
 	if(count % 10 == 0)
-	std::cout << "Lines Remaining: " << ny - count << std::endl;
+		std::cout << "Lines Remaining: " << ny - count << std::endl;
 }
 
 void BaseRaytracing::FinishedRayTracing()
@@ -113,14 +114,13 @@ hitable* BaseRaytracing::generate_random_scenes()
 	list[i++] = new sphere(vec3(-2, 1, 0), 1.0, new dielectric(1.5));
 	list[i++] = new sphere(vec3(-2, 1, 0), -0.8, new dielectric(1.5));
 
-	//Matte Sphere - Brown
-	list[i++] = new sphere(vec3(-4, 1, 0), 1.0, new lambertian(vec3(0.4, 0.2, 0.1)));
+	//Matte Sphere - Green
+	list[i++] = new sphere(vec3(-4, 1, 0), 1.0, new lambertian(vec3(0.1, 0.8, 0.2)));
 
 	//Metal Sphere - low gloss
-	list[i++] = new sphere(vec3(-0.5, 1, 1), 1.0, new metal(vec3(0.7, 0.6, 0.5), 0.0));
+	list[i++] = new sphere(vec3(-0.5, 1, 1), 1.0, new metal(vec3(0.7, 0.6, 0.5), 0.6));
 
 	//Mirror Metal
-	//list[i++] = new sphere(vec3(-6, 1, -1), 1.0, new lambertian(vec3(0.8, 0.1, 0.1)));
 	list[i++] = new sphere(vec3(-6, 1, -1), 1.0, new metal(vec3(1, 1, 1), 0.0));
 
 
