@@ -20,8 +20,8 @@ BaseRaytracing::BaseRaytracing()
 
 	float dist_to_focus = (lookfrom - lookat).length();
 	//Test Case 2: Changing camera aperture to achieve bookeh effect
-
-	float aperture = 1.0f;
+	float aperture = 0.05f;
+	//float aperture = 1.0f;
 
 	this->cam = new camera (lookfrom, lookat, vec3(0, 1, 0), 20.0f, float(nx) / float(ny), aperture, dist_to_focus);
 
@@ -112,23 +112,49 @@ hitable* BaseRaytracing::generate_random_scenes()
 			}
 		}
 	}
-	//Test Case Requirment # 1 - 3 deafult big balls + 1 reflective ball. 
+	//Test Case Requirment # 1 and 3 deafult big balls + 1 reflective ball. 
 
 
-	//Transparent Glass
-	list[i++] = new sphere(vec3(-2, 1, 0), 1.0, new dielectric(1.5));
-	list[i++] = new sphere(vec3(-2, 1, 0), -0.8, new dielectric(1.5));
 
-	//Matte Sphere - Green
-	list[i++] = new sphere(vec3(-4, 1, 0), 1.0, new lambertian(vec3(0.1, 0.8, 0.2)));
+	/*Test Case 1 Blocker == uncomment the section if want to replicate it*/
 
-	//Metal Sphere - low gloss
-	list[i++] = new sphere(vec3(-0.5, 1, 1), 1.0, new metal(vec3(0.7, 0.6, 0.5), 0.2));
+	////Transparent Glass
+	//list[i++] = new sphere(vec3(-2, 1, 0), 1.0, new dielectric(1.5));
+	//list[i++] = new sphere(vec3(-2, 1, 0), -0.8, new dielectric(1.5));
 
-	//Mirror Metal - Test case 1 ball
-	list[i++] = new sphere(vec3(-6, 1, -1), 1.0, new metal(vec3(1, 1, 1), 0.0));
+	////Matte Sphere - Green
+	//list[i++] = new sphere(vec3(-4, 1, 0), 1.0, new lambertian(vec3(0.1, 0.8, 0.2)));
+
+	////Metal Sphere - low gloss
+	//list[i++] = new sphere(vec3(-0.5, 1, 1), 1.0, new metal(vec3(0.7, 0.6, 0.5), 0.2));
+
+	////Mirror Metal - Test case 1 ball
+	//list[i++] = new sphere(vec3(-6, 1, -1), 1.0, new metal(vec3(1, 1, 1), 0.0));
 
 
+
+	//Test Case 3: stacking ball at the center == uncomment the section if want to replicate it
+	int stackSize = 10;
+	for (int j = 0; j < stackSize; j++) {
+		int randomNum = rand() % 3;
+		vec3 center(-3, (0.4 * (float)j) + 0.2, 0);
+		switch (randomNum) {
+		case 0:
+			list[i++] = new sphere(center, 0.2, new lambertian(vec3(drand48() * drand48(), drand48() * drand48(), drand48() * drand48())));
+			break;
+
+		case 1:
+			list[i++] = new sphere(center, 0.2,
+				new metal(vec3(0.5 * (1 + drand48()), 0.5 * (1 + drand48()), 0.5 * (1 + drand48())), 0.5 * (1 + drand48())));
+			break;
+
+		case 2:
+			list[i++] = new sphere(center, 0.2, new dielectric(1.5));
+			break;
+		}
+				
+	}
+	//(-3, 1, 0)
 	return new hitable_list(list, i);
 }
 
