@@ -19,7 +19,9 @@ BaseRaytracing::BaseRaytracing()
 	vec3 lookat(-3, 1, 0);
 
 	float dist_to_focus = (lookfrom - lookat).length();
-	float aperture = 0.05f;
+	//Test Case 2: Changing camera aperture to achieve bookeh effect
+
+	float aperture = 1.0f;
 
 	this->cam = new camera (lookfrom, lookat, vec3(0, 1, 0), 20.0f, float(nx) / float(ny), aperture, dist_to_focus);
 
