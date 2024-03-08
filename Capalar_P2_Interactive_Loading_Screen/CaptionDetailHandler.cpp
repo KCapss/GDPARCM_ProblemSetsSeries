@@ -151,6 +151,8 @@ void CaptionDetailHandler::SetupTextFormat()
 	this->versionText->setOutlineThickness(2);
 	this->versionText->setCharacterSize(24);
 
+	versionText->setString("GDPARCM: This is an imitation");
+
 
 	//Push All of them into a single vector
 	tooltipsList.push_back(titleText);
