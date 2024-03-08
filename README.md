@@ -32,18 +32,22 @@ A compilation of deliverable in Problem Sets for GDPARCM class
 
 ## Problem Set 2
   An interactive loading heavily inspired from honkai star rail
+
+  Project Dir = P2  = Capalar_P2_Interactive_Loading_Screen;
   
 ### Instruction
 - Entry File
-  - Main.cpp
+  - (ProjectDir)->Main.cpp
 - Setup:
-  - Project Folder Name: ""
-  - Assets Folder Name: ""
-    - File Size ~~40mb
+  - Project Folder Name: "Capalar_P2_Interactive_Loading_Screen"
+  - Assets Folder Name: "Media"
+    - File Size
+       - Stream = 169mb
+       - Loading = 13mb
   - Req. Package
     - SFML Stable Ver (For Working)
   - Build Depedencies
-    - OpenAl32: Audio Integration (both)
+    - OpenAl32.dll: Audio Integration (both)
     
 
 **Important:**
@@ -52,4 +56,5 @@ A compilation of deliverable in Problem Sets for GDPARCM class
   - To access. (projectDir)->OutputFile/
  
 ### Commit History Reference
-Under Construction
+1. Initial Commit -  - [[a5f413f](https://github.com/KCapss/GDPARCM_ProblemSetsSeries/commit/a5f413f8be4045000cb16807afa49ad60a1c491d)]
+2. Final Commit -  [[487ef3d](https://github.com/KCapss/GDPARCM_ProblemSetsSeries/commit/487ef3dffa637f15a51bc1932dfa7566bd212126)]
