@@ -38,7 +38,7 @@ const sf::Time BaseRunner::TIME_PER_FRAME = sf::seconds(1.f / 60.f);
 BaseRunner::BaseRunner() :
 	window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "P2 - Capalar, Loading Screen ", sf::Style::Close) {
 
-	//load loading screen texture
+	//=====load loading screen texture
 	JobSystem::getInstance()->initializeJob();
 	TextureManager::getInstance()->loadFromAssetList();
 	FontManager::getInstance()->loadFromLoadingAssetList();
@@ -54,9 +54,25 @@ BaseRunner::BaseRunner() :
 	GameObjectManager::getInstance()->addObject(bladeIcon);
 	bladeIcon->adjustFramePosition(sf::Vector2i(-950,-200));
 
+	StreamAnimationObject* blade1Icon = new StreamAnimationObject("Blade");
+	GameObjectManager::getInstance()->addObject(blade1Icon);
+	blade1Icon->adjustFramePosition(sf::Vector2i(-950, 50));
+
+	StreamAnimationObject* blade2Icon = new StreamAnimationObject("Blade");
+	GameObjectManager::getInstance()->addObject(blade2Icon);
+	blade2Icon->adjustFramePosition(sf::Vector2i(-950, 300));
+
 	StreamAnimationObject* guinaifenIcon = new StreamAnimationObject("Guinaifen");
 	GameObjectManager::getInstance()->addObject(guinaifenIcon);
 	guinaifenIcon->adjustFramePosition(sf::Vector2i(-650, -250));
+
+	StreamAnimationObject* guinaifen1Icon = new StreamAnimationObject("Guinaifen");
+	GameObjectManager::getInstance()->addObject(guinaifen1Icon);
+	guinaifen1Icon->adjustFramePosition(sf::Vector2i(-650, -100));
+
+	StreamAnimationObject* guinaifen2Icon = new StreamAnimationObject("Guinaifen");
+	GameObjectManager::getInstance()->addObject(guinaifen2Icon);
+	guinaifen2Icon->adjustFramePosition(sf::Vector2i(-650, 150));
 
 	StreamAnimationObject* claraIcon = new StreamAnimationObject("Clara");
 	GameObjectManager::getInstance()->addObject(claraIcon);
@@ -70,9 +86,26 @@ BaseRunner::BaseRunner() :
 	GameObjectManager::getInstance()->addObject(hertaIcon);
 	hertaIcon->adjustFramePosition(sf::Vector2i(350, -250));
 
+	StreamAnimationObject* herta1Icon = new StreamAnimationObject("Herta");
+	GameObjectManager::getInstance()->addObject(herta1Icon);
+	herta1Icon->adjustFramePosition(sf::Vector2i(350, -100));
+
+	StreamAnimationObject* herta2Icon = new StreamAnimationObject("Herta");
+	GameObjectManager::getInstance()->addObject(herta2Icon);
+	herta2Icon->adjustFramePosition(sf::Vector2i(350, 150));
+
+
 	StreamAnimationObject* marchIcon = new StreamAnimationObject("March");
 	GameObjectManager::getInstance()->addObject(marchIcon);
 	marchIcon->adjustFramePosition(sf::Vector2i(650, -200));
+
+	StreamAnimationObject* march1Icon = new StreamAnimationObject("March");
+	GameObjectManager::getInstance()->addObject(march1Icon);
+	march1Icon->adjustFramePosition(sf::Vector2i(650, 50));
+
+	StreamAnimationObject* march2Icon = new StreamAnimationObject("March");
+	GameObjectManager::getInstance()->addObject(march2Icon);
+	march2Icon->adjustFramePosition(sf::Vector2i(650, 300));
 
 	StreamText* streamText = new StreamText();
 	GameObjectManager::getInstance()->addObject(streamText);
@@ -80,7 +113,7 @@ BaseRunner::BaseRunner() :
 
 
 
-	//Loading Assets
+	//===== Loading  Screen Assets
 	BGScrolling* scrollingBG = new BGScrolling("ScrollingBg");
 	GameObjectManager::getInstance()->addObject(scrollingBG);
 

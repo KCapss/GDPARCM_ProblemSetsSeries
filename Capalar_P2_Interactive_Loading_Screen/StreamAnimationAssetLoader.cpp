@@ -30,16 +30,17 @@ StreamAnimationAssetLoader::~StreamAnimationAssetLoader()
 void StreamAnimationAssetLoader::onStartTask()
 {
 	//Simulate Large Batch Assets being loaded
-	IETThread::sleep(500);
-
 	std::cout << "[Animation Texture] Reading from " << assetName << std::endl;
 	path.append("/");
 
 
 	for (const auto& entry : std::filesystem::directory_iterator(path)) {
+
+		//Simulate the randomness of the size of a single frame
 		this->durationMultiplier = rand() % 10 + 1;
-		IETThread::sleep(150 * durationMultiplier);
-		LoadingManager::getInstance()->IncrementAssetLoaded();
+		IETThread::sleep(250 * durationMultiplier);
+
+		LoadingManager::getInstance()->IncrementAssetLoaded(); //Add to the progression Meter
 		//Concurency Potential Problem
 		TextureManager::getInstance()->instantiateAsTexture(entry.path().generic_string() , assetName, true);
 	}

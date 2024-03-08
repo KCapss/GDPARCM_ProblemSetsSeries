@@ -28,13 +28,11 @@ void LoadingManager::IncrementAssetLoaded()
 {
 	loadMutex.lock();
 	currentAssetsLoaded++;
-	//std::cout << "Remaining: " << maxAssetsCount - currentAssetsLoaded << std::endl;
 
 	if (maxAssetsCount <= currentAssetsLoaded) {
 		status = true;
 	}
 		
-
 	loadMutex.unlock();
 }
 

@@ -18,8 +18,9 @@ void JobSystem::initializeJob()
 {
 	processor_count = std::thread::hardware_concurrency();
 
+	//To have one main thread running
 	if(threadPool == nullptr)
-		threadPool = new ThreadPool("JobWorker", processor_count - 1); //To have one main thread running
+		threadPool = new ThreadPool("JobWorker", processor_count - 1); 
 
 	threadPool->startScheduler();
 }

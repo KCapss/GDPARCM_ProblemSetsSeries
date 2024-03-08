@@ -49,17 +49,11 @@ void FPSCounter::draw(sf::RenderWindow* targetWindow)
 
 void FPSCounter::updateFPS(sf::Time elapsedTime)
 {
-
-	//float FPS_estimate = (sf::seconds(1.f / 60.f).asSeconds() / elapsedTime.asSeconds()) * 2.0f;
-
-
 	float FPS_estimate = 1.0f / elapsedTime.asSeconds();
-	float b = floor(FPS_estimate * 100.0f) / 100.0f;
 
 	
 	if (FPS_estimate > 60) {
 		FPS_estimate = 60.00f;
-		
 	}
 
 	std::string myval_str;

@@ -16,7 +16,7 @@ StreamBGObject::StreamBGObject(string name) : AGameObject(name)
 void StreamBGObject::initialize()
 {
 	std::cout << "Declared as " << this->getName() << "\n";
-
+	
 	StreamAssetLoader* bgAssetsload = new StreamAssetLoader("Media/Stream/Texture/" + name + ".png", this);
 	ThreadPool* copyPool = JobSystem::getInstance()->GetThreadPool();
 	copyPool->scheduleTask(bgAssetsload);

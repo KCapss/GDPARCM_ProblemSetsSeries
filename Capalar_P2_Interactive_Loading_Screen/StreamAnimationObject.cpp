@@ -15,6 +15,8 @@ void StreamAnimationObject::initialize()
 {
 	//Retrieve Relative File Path
 	String path = TextureManager::getInstance()->RetrieveRelativeAnimationPath(this->name);
+
+	//Count all the assets neeed 
 	LoadingManager::getInstance()->AddAssetTally(TextureManager::getInstance()->RetrieveSpriteSheetSize(path));
 
 
