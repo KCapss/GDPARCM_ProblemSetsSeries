@@ -18,7 +18,7 @@ TextureManager* TextureManager::getInstance() {
 	if (sharedInstance == NULL) {
 		//initialize
 		sharedInstance = new TextureManager();
-		//sharedInstance->threadPool = new ThreadPool ("TextureWorker", 16);
+		
 	}
 
 	return sharedInstance;
@@ -26,12 +26,6 @@ TextureManager* TextureManager::getInstance() {
 
 TextureManager::TextureManager()
 {
-	this->countStreamingAssets();
-	
-	////Threading
-	//this->threadPool = new ThreadPool("TextureWorker", 32);
-	
-
 }
 
 void TextureManager::loadFromAssetList()
@@ -116,9 +110,7 @@ int TextureManager::RetrieveSpriteSheetSize(String path)
 {
 	int count = 0;
 	for (const auto& entry : std::filesystem::directory_iterator(path)) {
-
 		count++;
-
 	}
 
 	return count;

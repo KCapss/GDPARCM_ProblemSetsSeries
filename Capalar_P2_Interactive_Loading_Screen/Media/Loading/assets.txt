@@ -1,8 +1,6 @@
 Media/Loading/Textures/Galaxy.png
 Media/Loading/Textures/OpenWindow.png
-Media/Loading/Textures/Scrolling.png
 Media/Loading/Textures/UnderBanner.png
 Media/Loading/Textures/loadBar.png
-Media/Loading/Textures/Desert.png
 Media/Loading/Textures/SpaceStation.png
 Media/Loading/Textures/LineLoad.png

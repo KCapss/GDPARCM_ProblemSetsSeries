@@ -27,7 +27,7 @@ void FPSCounter::initialize()
 	this->statsText->setPosition(BaseRunner::WINDOW_WIDTH - 175, 0);
 	this->statsText->setOutlineColor(sf::Color(1.0f, 1.0f, 1.0f));
 	this->statsText->setOutlineThickness(2.5f);
-	this->statsText->setCharacterSize(24);
+	this->statsText->setCharacterSize(36);
 }
 
 void FPSCounter::processInput(sf::Event event)
