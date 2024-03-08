@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Components">
+      <UniqueIdentifier>{31fb84fb-eb60-46a0-baff-1cf09d8ef45e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{584093dc-24bf-42c2-9310-66f35dea8958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\GameObject">
+      <UniqueIdentifier>{2d421438-acde-48bc-91ec-6ef751a45469}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Texture">
+      <UniqueIdentifier>{a0ae47f0-878b-4643-a979-5a9bfef68328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Others">
+      <UniqueIdentifier>{df10d9f6-f579-4855-b0d2-bfbd51b338c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\UI">
+      <UniqueIdentifier>{b4add403-f5f2-4414-99b1-916d31b3f93e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Threading">
+      <UniqueIdentifier>{daaf5290-92b5-4289-981b-01598ed3391e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\GameObject\MainLoading">
+      <UniqueIdentifier>{d6010cc4-52de-40bc-b439-d6d16a1a17a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\UI\TextList">
+      <UniqueIdentifier>{bf9da70f-50ed-4936-90b4-64032bc1ead8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\GameObject\AssetLoading">
+      <UniqueIdentifier>{0d1d4d0f-76b0-4137-b258-dfdbe9b638eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Extra">
+      <UniqueIdentifier>{8cf1f664-8600-4601-9c25-779bcd79c691}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="AGameObject.cpp">
+      <Filter>Components\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseRunner.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Components\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectManager.cpp">
+      <Filter>Components\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FPSCounter.cpp">
+      <Filter>Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtils.cpp">
+      <Filter>Components\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="StringUtils.cpp">
+      <Filter>Components\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="IETThread.cpp">
+      <Filter>Components\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>Components\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamAssetLoader.cpp">
+      <Filter>Components\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="PoolWorkerThread.cpp">
+      <Filter>Components\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="IExecutionEvent.cpp">
+      <Filter>Components\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadMainBGObject.cpp">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowLoadBGObject.cpp">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="BGScrolling.cpp">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_UnderlineWorks.cpp">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_LoadingIndicatorObject.cpp">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="CaptionDetailHandler.cpp">
+      <Filter>Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="IconAnimationObject.cpp">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="FontManager.cpp">
+      <Filter>Components\UI\TextList</Filter>
+    </ClCompile>
+    <ClCompile Include="TooltipDialogue.cpp">
+      <Filter>Components\UI\TextList</Filter>
+    </ClCompile>
+    <ClCompile Include="SFXManager.cpp">
+      <Filter>Components\Extra</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamAnimationObject.cpp">
+      <Filter>Components\GameObject\AssetLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="JobSystem.cpp">
+      <Filter>Components\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamBGObject.cpp">
+      <Filter>Components\GameObject\AssetLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamText.cpp">
+      <Filter>Components\GameObject\AssetLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingManager.cpp">
+      <Filter>Components\Extra</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamAnimationAssetLoader.cpp">
+      <Filter>Components\Texture</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AGameObject.h">
+      <Filter>Components\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseRunner.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Components\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectManager.h">
+      <Filter>Components\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="FPSCounter.h">
+      <Filter>Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtils.h">
+      <Filter>Components\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="StringUtils.h">
+      <Filter>Components\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="IETThread.h">
+      <Filter>Components\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>Components\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamAssetLoader.h">
+      <Filter>Components\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="IWorkerAction.h">
+      <Filter>Components\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="PoolWorkerThread.h">
+      <Filter>Components\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="IExecutionEvent.h">
+      <Filter>Components\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadMainBGObject.h">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowLoadBGObject.h">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="BGScrolling.h">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_UnderlineWorks.h">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_LoadingIndicatorObject.h">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="CaptionDetailHandler.h">
+      <Filter>Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="IconAnimationObject.h">
+      <Filter>Components\GameObject\MainLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="FontManager.h">
+      <Filter>Components\UI\TextList</Filter>
+    </ClInclude>
+    <ClInclude Include="TooltipDialogue.h">
+      <Filter>Components\UI\TextList</Filter>
+    </ClInclude>
+    <ClInclude Include="SFXManager.h">
+      <Filter>Components\Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamAnimationObject.h">
+      <Filter>Components\GameObject\AssetLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="JobSystem.h">
+      <Filter>Components\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamBGObject.h">
+      <Filter>Components\GameObject\AssetLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamText.h">
+      <Filter>Components\GameObject\AssetLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingManager.h">
+      <Filter>Components\Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamAnimationAssetLoader.h">
+      <Filter>Components\Texture</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
