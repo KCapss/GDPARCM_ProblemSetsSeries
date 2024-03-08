@@ -37,12 +37,11 @@ void StreamAnimationAssetLoader::onStartTask()
 
 
 	for (const auto& entry : std::filesystem::directory_iterator(path)) {
-		this->durationMultiplier = rand() % 4 + 1;
-		IETThread::sleep(100 * durationMultiplier);
+		this->durationMultiplier = rand() % 10 + 1;
+		IETThread::sleep(150 * durationMultiplier);
 		LoadingManager::getInstance()->IncrementAssetLoaded();
 		//Concurency Potential Problem
 		TextureManager::getInstance()->instantiateAsTexture(entry.path().generic_string() , assetName, true);
-
 	}
 
 

@@ -40,7 +40,7 @@ void SFXManager::playLoadMusic()
 
 	if (musicTrack->getStatus() == sf::Music::Stopped) {
 		musicTrack = SFXManager::getInstance()->getMusicFile("loadingMusic");
-		musicTrack->setVolume(40);
+		musicTrack->setVolume(70);
 		musicTrack->setLoop(true);
 		musicTrack->play();
 	}
