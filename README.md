@@ -46,13 +46,14 @@ A compilation of deliverable in Problem Sets for GDPARCM class
        - Loading = 13mb
   - Req. Package
     - SFML Stable Ver (For Working)
+      - Use the vcpkg from the [website (https://vcpkg.io/)] and install the latest stable version to the project dir.    
   - Build Depedencies
     - OpenAl32.dll: Audio Integration (both)
     
 
 **Important:**
 - It is adivisable to run the program on release (for improved speed on multithreading)
-- - In any case you unable to compile and run the program via the compiler, you can open both the png and zip of the test cases which contain the release exec version.
+- - In any case you unable to compile and run the program via the compiler, you can open contain the release exec version.
   - To access. (projectDir)->OutputFile/
  
 ### Commit History Reference
